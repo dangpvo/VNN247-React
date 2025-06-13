@@ -1,0 +1,7 @@
+.head {
+  cursor: pointer;
+}
+
+.head .logo img {
+  width: 500px;
+}
