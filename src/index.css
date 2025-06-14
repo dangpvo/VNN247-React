@@ -47,3 +47,11 @@ a {
 .paddingTB {
   padding: 40px 0;
 }
+
+.paddingSmall {
+  padding: 20px 0;
+}
+
+ul {
+  list-style-type: none;
+}

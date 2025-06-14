@@ -1,17 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
+import { assets } from "../../assets/assets";
 
 const Header = () => {
+  const [navbar, setNavbar] = useState(false);
+
   return (
     <>
       <section className="head">
         <div className="container flexSB paddingTB">
           <div className="logo">
-            <img src="../../assets/images/logo.png" alt="" />
+            <img src={assets.logo} alt="" />
           </div>
           <div className="ad">
-            <img src="../../assets/images/headerb.png" alt="" />
+            <img src={assets.headerb} alt="" />
           </div>
         </div>
       </section>
@@ -19,7 +22,10 @@ const Header = () => {
       <header>
         <div className="container paddingSmall">
           <nav>
-            <ul>
+            <ul
+              className={navbar ? "navbar" : "flex"}
+              onClick={() => setNavbar(false)}
+            >
               <li>
                 <Link to={"/"}>Home</Link>
               </li>
@@ -42,8 +48,12 @@ const Header = () => {
                 <Link to={"/reviews"}>Reviews</Link>
               </li>
             </ul>
-            <button className="barIco">
-              <i className="bxr  bx-menu"></i>
+            <button className="barIco" onClick={() => setNavbar(!navbar)}>
+              {navbar ? (
+                <i class="bx bx-x" />
+              ) : (
+                <i className="bxr  bx-menu"></i>
+              )}
             </button>
           </nav>
         </div>
