@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Hero.css";
 import { assets, hero } from "../../../../assets/assets";
-import Card from "../card/Card";
+import Card from "../../../../components/card/Card";
 
 const Hero = () => {
   const [items, setItems] = useState(hero);

@@ -1,0 +1,10 @@
+.side-content {
+  width: 23%;
+  background-color: blue;
+}
+
+@media screen and (max-width: 768px) {
+  .side-content {
+    width: 100%;
+  }
+}
