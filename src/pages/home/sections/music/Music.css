@@ -1,0 +1,23 @@
+.music .box {
+  margin-bottom: 30px;
+  margin-left: 2px;
+}
+
+.music .text {
+  padding: 0 30px;
+}
+
+.music .image {
+  width: 320px;
+  height: 220px;
+}
+
+.music img {
+  width: 320px;
+  height: 220px;
+  object-fit: cover;
+}
+
+.music h1 {
+  font-size: 22px;
+}
