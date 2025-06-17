@@ -47,7 +47,7 @@ import discover4 from "./images/discover/d4.jpg";
 import discover5 from "./images/discover/d5.jpg";
 import discover6 from "./images/discover/d6.jpg";
 
-import tpost from "./images/tpost/tpost.webp";
+import tpost1 from "./images/tpost/tpost.webp";
 import tpost2 from "./images/tpost/tpost2.jpg";
 import tpost3 from "./images/tpost/tpost3.jpg";
 
@@ -496,7 +496,7 @@ export const tpost = [
   {
     id: 1,
     title: "US Promises to give Intel aid to locate the soldiers",
-    cover: tpost,
+    cover: tpost1,
   },
   {
     id: 2,

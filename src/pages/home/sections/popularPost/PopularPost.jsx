@@ -6,53 +6,42 @@ import Slider from "react-slick";
 
 const PopularPost = () => {
   var settings = {
-    className: "center",
-    centerMode: false,
-    infinite: true,
-    centerPadding: "",
-    slidesToShow: 2,
-    speed: 500,
-    rows: 4,
-    slidesPerRow: 1,
     dots: false,
-    responsive: [
-      {
-        breakpoint: 800,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesPerRow: 1,
   };
 
   return (
     <>
       <section className="popular-post">
-        <SectionHeading title={"Popular Post"} />
-        <Slider {...settings}>
-          {ppost.map((item) => (
-            <div className="item">
-              <div className="box shadow">
-                <div className="image row">
-                  <div className="img">
-                    <img src={item.cover} alt="" />
+        <SectionHeading title={"Popular Posts"} />
+        <div className="content">
+          <Slider {...settings}>
+            {ppost.map((item) => (
+              <div className="item">
+                <div className="box shadow">
+                  <div className="image">
+                    <div className="img">
+                      <img src={item.cover} alt="" />
+                    </div>
+                    <div className="category category1">
+                      <span>{item.category}</span>
+                    </div>
                   </div>
-                  <div className="category category1">
-                    <span>{item.category}</span>
-                  </div>
-                </div>
-                <div className="text row">
-                  <h1 className="title">{item.title.slice(0, 50)}...</h1>
-                  <div className="date">
-                    <i class="bxr  bx-calendar-alt"></i>
-                    <label htmlFor="">{item.date}</label>
+                  <div className="text">
+                    <h1 className="title">{item.title.slice(0, 40)}...</h1>
+                    <div className="date">
+                      <i class="bxr  bx-calendar-alt"></i>
+                      <label htmlFor="">{item.date}</label>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </Slider>
+            ))}
+          </Slider>
+        </div>
       </section>
     </>
   );
