@@ -24,6 +24,33 @@ import pop14 from "./images/popular/pop14.jpg";
 import pop15 from "./images/popular/pop15.jpg";
 import pop16 from "./images/popular/pop16.jpg";
 
+import ppost1 from "./images/ppost/pop1.jpg";
+import ppost2 from "./images/ppost/pop2.jpg";
+import ppost3 from "./images/ppost/pop3.jpg";
+import ppost4 from "./images/ppost/pop4.jpg";
+
+import life1 from "./images/life/life1.jpg";
+import life2 from "./images/life/life2.jpg";
+import life3 from "./images/life/life3.jpg";
+import life4 from "./images/life/life4.jpg";
+
+import gallery1 from "./images/gallery/g1.jpg";
+import gallery2 from "./images/gallery/g2.jpg";
+import gallery3 from "./images/gallery/g3.jpg";
+import gallery4 from "./images/gallery/g4.jpg";
+import gallery5 from "./images/gallery/g5.jpg";
+
+import discover1 from "./images/discover/d1.jpg";
+import discover2 from "./images/discover/d2.jpg";
+import discover3 from "./images/discover/d3.jpg";
+import discover4 from "./images/discover/d4.jpg";
+import discover5 from "./images/discover/d5.jpg";
+import discover6 from "./images/discover/d6.jpg";
+
+import tpost from "./images/tpost/tpost.webp";
+import tpost2 from "./images/tpost/tpost2.jpg";
+import tpost3 from "./images/tpost/tpost3.jpg";
+
 export const assets = {
   logo,
   headerb,
@@ -409,28 +436,28 @@ export const ppost = [
     category: "world",
     title: "We Went Deep Underground For This Amazing Cave Shot",
     date: "19. February 2022",
-    cover: "../images/ppost/pop1.jpg",
+    cover: ppost1,
   },
   {
     id: 2,
     category: "health",
     title: "6 Reasons Why You Shouldn’t Skip Breakfast",
     date: "19. February 2022",
-    cover: "../images/ppost/pop2.jpg",
+    cover: ppost2,
   },
   {
     id: 3,
     category: "food",
     title: "Our Top 5 Restaurants For A Complete Culinary Experience",
     date: "19. February 2022",
-    cover: "../images/ppost/pop3.jpg",
+    cover: ppost3,
   },
   {
     id: 4,
     category: "fashion",
     title: "Hipster Chic Is In Again: Get Some Glasses",
     date: "19. February 2022",
-    cover: "../images/ppost/pop4.jpg",
+    cover: ppost4,
   },
 ];
 
@@ -440,28 +467,28 @@ export const lifestyle = [
     category: "world",
     title: "Mustang Teases With A New Promo",
     date: "19. February 2022",
-    cover: "../images/life/life1.jpg",
+    cover: life1,
   },
   {
     id: 2,
     category: "sport",
     title: "Surfs Up – Places For Killer Waves",
     date: "19. February 2022",
-    cover: "../images/life/life2.jpg",
+    cover: life2,
   },
   {
     id: 3,
     category: "fashion",
     title: "Learn How To Nail Your Favorite Look",
     date: "19. February 2022",
-    cover: "../images/life/life3.jpg",
+    cover: life3,
   },
   {
     id: 4,
     category: "world",
     title: "Music Playing On R&B Stations",
     date: "19. February 2022",
-    cover: "../images/life/life4.jpg",
+    cover: life4,
   },
 ];
 
@@ -469,61 +496,61 @@ export const tpost = [
   {
     id: 1,
     title: "US Promises to give Intel aid to locate the soldiers",
-    cover: "../images/tpost/tpost.webp",
+    cover: tpost,
   },
   {
     id: 2,
     title: "Renewable energy dead as industry waits for Policy",
-    cover: "../images/tpost/tpost2.jpg",
+    cover: tpost2,
   },
   {
     id: 3,
     title: "Mount Etna erupts fashion in nice looking pictures",
-    cover: "../images/tpost/tpost3.jpg",
+    cover: tpost3,
   },
 ];
 
 export const gallery = [
   {
-    cover: "../images/gallery/g1.jpg",
+    cover: gallery1,
   },
   {
-    cover: "../images/gallery/g2.jpg",
+    cover: gallery2,
   },
   {
-    cover: "../images/gallery/g3.jpg",
+    cover: gallery3,
   },
   {
-    cover: "../images/gallery/g4.jpg",
+    cover: gallery4,
   },
   {
-    cover: "../images/gallery/g5.jpg",
+    cover: gallery5,
   },
 ];
 
 export const discover = [
   {
     title: "games",
-    cover: "../images/discover/d1.jpg",
+    cover: discover1,
   },
   {
     title: "sports",
-    cover: "../images/discover/d2.jpg",
+    cover: discover2,
   },
   {
     title: "humour",
-    cover: "../images/discover/d3.jpg",
+    cover: discover3,
   },
   {
     title: "gadgets",
-    cover: "../images/discover/d4.jpg",
+    cover: discover4,
   },
   {
     title: "movies",
-    cover: "../images/discover/d5.jpg",
+    cover: discover5,
   },
   {
     title: "nitendo",
-    cover: "../images/discover/d6.jpg",
+    cover: discover6,
   },
 ];
