@@ -33,7 +33,7 @@ const PopularPost = () => {
                   <div className="text">
                     <h1 className="title">{item.title.slice(0, 40)}...</h1>
                     <div className="date">
-                      <i class="bxr  bx-calendar-alt"></i>
+                      <i className="bxr  bx-calendar-alt"></i>
                       <label htmlFor="">{item.date}</label>
                     </div>
                   </div>

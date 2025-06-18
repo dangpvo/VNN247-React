@@ -50,7 +50,7 @@ const Header = () => {
             </ul>
             <button className="barIco" onClick={() => setNavbar(!navbar)}>
               {navbar ? (
-                <i class="bx bx-x" />
+                <i className="bx bx-x" />
               ) : (
                 <i className="bxr  bx-menu"></i>
               )}

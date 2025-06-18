@@ -45,7 +45,7 @@ const Popular = () => {
                 <div className="text row">
                   <h1 className="title">{item.title.slice(0, 50)}...</h1>
                   <div className="date">
-                    <i class="bxr  bx-calendar-alt"></i>
+                    <i className="bxr  bx-calendar-alt"></i>
                     <label htmlFor="">{item.date}</label>
                   </div>
                 </div>

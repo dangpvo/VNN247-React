@@ -48,7 +48,7 @@ const Music = () => {
                     <div className="text">
                       <h1 className="title">{item.title.slice(0, 50)}...</h1>
                       <div className="date">
-                        <i class="bxr  bx-calendar-alt"></i>
+                        <i className="bxr  bx-calendar-alt"></i>
                         <label htmlFor="">{item.date}</label>
                       </div>
                       <p className="desc">{item.desc.slice(0, 250)}...</p>

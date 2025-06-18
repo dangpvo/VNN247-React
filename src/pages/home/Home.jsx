@@ -1,8 +1,8 @@
 import React from "react";
 import "./Home.css";
 import Hero from "./sections/hero/Hero";
-import MainContent from "./sections/mainContent/MainContent";
-import SideContent from "./sections/sideContent/SideContent";
+import SideContent from "./sideContent/SideContent";
+import MainContent from "./mainContent/MainContent";
 
 const Home = () => {
   return (

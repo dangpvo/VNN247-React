@@ -1,9 +1,9 @@
 import React from "react";
 import "./MainContent.css";
-import Popular from "../popular/Popular";
-import PopularPost from "../popularPost/PopularPost";
-import Life from "../life/Life";
-import Music from "../music/Music";
+import Popular from "../sections/popular/Popular";
+import PopularPost from "../sections/popularPost/PopularPost";
+import Life from "../sections/life/Life";
+import Music from "../sections/music/Music";
 
 const MainContent = () => {
   return (
