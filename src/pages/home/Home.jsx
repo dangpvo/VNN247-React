@@ -3,6 +3,7 @@ import "./Home.css";
 import Hero from "./sections/hero/Hero";
 import SideContent from "./sideContent/SideContent";
 import MainContent from "./mainContent/MainContent";
+import Discover from "./discover/Discover";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
           <SideContent />
         </div>
       </main>
+      <Discover />
     </>
   );
 };
