@@ -1,4 +1,5 @@
 import logo from "./images/logo.png";
+import logoFooter from "./images/tech-logo-footer.png";
 import headerb from "./images/headerb.png";
 import author from "./images/author.jpg";
 import sidebarBanner from "./images/sidebar-banner-new.jpg";
@@ -56,6 +57,11 @@ export const assets = {
   logo,
   headerb,
   sidebarBanner,
+  logoFooter,
+  coverImgHero1,
+  coverImgHero2,
+  coverImgHero3,
+  coverImgHero4,
 };
 
 // DUMMY DATA
