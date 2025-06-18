@@ -1,6 +1,7 @@
 import logo from "./images/logo.png";
 import headerb from "./images/headerb.png";
 import author from "./images/author.jpg";
+import sidebarBanner from "./images/sidebar-banner-new.jpg";
 
 import coverImgHero1 from "./images/hero/hero1.jpg";
 import coverImgHero2 from "./images/hero/hero2.jpg";
@@ -54,6 +55,7 @@ import tpost3 from "./images/tpost/tpost3.jpg";
 export const assets = {
   logo,
   headerb,
+  sidebarBanner,
 };
 
 // DUMMY DATA
