@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <>
       <section className="head">
-        <div className="container flexSB paddingTB">
+        <div className="container flexSB">
           <div className="logo">
             <img src={assets.logo} alt="" />
           </div>

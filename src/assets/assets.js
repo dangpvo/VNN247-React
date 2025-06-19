@@ -1,5 +1,5 @@
-import logo from "./images/logo.png";
-import logoFooter from "./images/tech-logo-footer.png";
+import logo from "./vnn247/9-cut.png";
+import logoFooter from "./vnn247/8-cut.png";
 import headerb from "./images/headerb.png";
 import author from "./images/author.jpg";
 import sidebarBanner from "./images/sidebar-banner-new.jpg";

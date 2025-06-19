@@ -3,11 +3,11 @@
 }
 
 .head .logo img {
-  width: 500px;
+  width: 250px;
 }
 
 header {
-  background-color: #000;
+  background-color: #1b3160;
   color: #fff;
 }
 
@@ -24,6 +24,12 @@ header li a {
 header li a:hover {
   color: crimson;
   cursor: pointer;
+}
+
+header .ad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .barIco {
