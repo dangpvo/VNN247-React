@@ -1,0 +1,8 @@
+.notfound-wrapper {
+  min-height: 100vh;
+  /* background: green; */
+  background-image: url("../../assets/vnn247/notfoundPg_2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}

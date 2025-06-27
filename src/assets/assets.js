@@ -3,6 +3,8 @@ import logoFooter from "./vnn247/8-cut.png";
 import headerb from "./images/headerb.png";
 import author from "./images/author.jpg";
 import sidebarBanner from "./images/sidebar-banner-new.jpg";
+import loadingPg from "./vnn247/loadingPg.png";
+import notfoundPg from "./vnn247/notfoundPg_2.png";
 
 import coverImgHero1 from "./images/hero/hero1.jpg";
 import coverImgHero2 from "./images/hero/hero2.jpg";
@@ -62,6 +64,8 @@ export const assets = {
   coverImgHero2,
   coverImgHero3,
   coverImgHero4,
+  loadingPg,
+  notfoundPg,
 };
 
 // DUMMY DATA
