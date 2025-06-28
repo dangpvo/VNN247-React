@@ -4,7 +4,7 @@ import { Route, Router, Routes } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Footer from "./components/footer/Footer";
 import LoadingPg from "./pages/loading/LoadingPg";
-import NotFound from "./pages/notFound/NotFound";
+import NotFoundPg from "./pages/notFoundPg/NotFoundPg";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -26,7 +26,7 @@ const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="*" element={<NotFound />}></Route>
+        <Route path="*" element={<NotFoundPg />}></Route>
       </Routes>
       <Footer />
     </>

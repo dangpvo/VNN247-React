@@ -1,8 +1,8 @@
 import React from "react";
-import "./NotFound.css";
+import "./NotFoundPg.css";
 
-const NotFound = () => {
+const NotFoundPg = () => {
   return <div className="notfound-wrapper"></div>;
 };
 
-export default NotFound;
+export default NotFoundPg;
