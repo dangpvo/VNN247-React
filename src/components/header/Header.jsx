@@ -34,8 +34,8 @@ const Header = () => {
 
   return (
     <>
-      <section className="head">
-        <div className="container flexSB">
+      <section className="head container">
+        <div className=" flexSB">
           <div className="logo">
             <img src={assets.logo} alt="" />
           </div>
