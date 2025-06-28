@@ -9,6 +9,7 @@
 header {
   background-color: #1b3160;
   color: #fff;
+  position: relative;
 }
 
 header li {
@@ -38,6 +39,29 @@ header .ad {
   background: none;
   color: #fff;
   border: none;
+}
+
+.more-li {
+  position: relative;
+  cursor: pointer;
+}
+
+.more-popup {
+  position: absolute;
+  top: 100%;
+  right: -5px;
+  background-color: var(--clr-main-2);
+  /* border: 1px solid #ccc; */
+  border-radius: 5px;
+  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+  margin-top: 21px;
+  z-index: 1000;
+  min-width: 150px;
+  padding-left: 5px;
+}
+
+.more-popup .more-popup__li {
+  padding-block: 5px;
 }
 
 @media screen and (max-width: 768px) {
