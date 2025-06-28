@@ -25,8 +25,8 @@ const App = () => {
     <>
       <Header />
       <Routes>
-        <Route path="/" Component={Home}></Route>
-        <Route path="*" Component={NotFound}></Route>
+        <Route path="/" Component={<Home />}></Route>
+        <Route path="*" Component={<NotFound />}></Route>
       </Routes>
       <Footer />
     </>
