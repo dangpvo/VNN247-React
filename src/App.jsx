@@ -3,8 +3,8 @@ import Header from "./components/header/Header";
 import { Route, Router, Routes } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Footer from "./components/footer/Footer";
-import NotFound from "./pages/notfound/NotFound";
 import LoadingPg from "./pages/loading/LoadingPg";
+import NotFound from "./pages/notfound/NotFound";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
