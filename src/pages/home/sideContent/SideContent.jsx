@@ -31,7 +31,7 @@ const SideContent = () => {
       <SectionHeading title={"Stay Connected"} />
       <SocialMedia />
 
-      <SectionHeading title={"Subscribe"} />
+      {/* <SectionHeading title={"Subscribe"} />
       <div className="subscribe">
         <h1 className="title">Subscribe to our New Stories</h1>
         <form action="">
@@ -40,7 +40,7 @@ const SideContent = () => {
             <i className="bxr  bx-paper-plane"></i> SUBMIT
           </button>
         </form>
-      </div>
+      </div> */}
 
       <div className="banner">
         <img src={assets.sidebarBanner} alt="" />
