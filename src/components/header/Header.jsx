@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import { assets } from "../../assets/assets";
+import useMobileNav from "../../hooks/useMobileNav";
 
 const Header = () => {
   const [navbar, setNavbar] = useState(false);
@@ -9,9 +10,17 @@ const Header = () => {
   const moreMenuRef = useRef(null);
   const morePopupRef = useRef(null);
 
+  const { isMobileNavOpen, toggleMobileNav, mobileNavRef, headerBarsRef } =
+    useMobileNav();
+
   const togglePopup = (e) => {
     e.preventDefault();
     setIsPopupVisible((prev) => !prev);
+  };
+
+  const handleMobileNav = () => {
+    toggleMobileNav();
+    setNavbar(!navbar);
   };
 
   useEffect(() => {
@@ -34,14 +43,21 @@ const Header = () => {
 
   return (
     <>
-      <section className="head container">
-        <div className=" flexSB">
+      <section className="head">
+        <div className="container flexSB">
           <div className="logo">
-            <img src={assets.logo} alt="" />
+            <img src={assets.logoFooter} alt="" />
           </div>
           {/* <div className="ad">
             <img src={assets.headerb} alt="" />
           </div> */}
+          <button className="barIco" onClick={() => handleMobileNav()}>
+            {navbar ? (
+              <i className="bx bx-x" />
+            ) : (
+              <i className="bxr  bx-menu"></i>
+            )}
+          </button>
         </div>
       </section>
 
@@ -107,17 +123,99 @@ const Header = () => {
                 )}
               </li>
             </ul>
-
-            <button className="barIco" onClick={() => setNavbar(!navbar)}>
-              {navbar ? (
-                <i className="bx bx-x" />
-              ) : (
-                <i className="bxr  bx-menu"></i>
-              )}
-            </button>
           </nav>
         </div>
       </header>
+
+      {/* Mobile Navigation */}
+      <div ref={mobileNavRef} className="mobile-nav">
+        <nav>
+          <ul className="mobile-nav__menu">
+            <li>
+              <Link to={"/"} className="mobile-nav__link">
+                Trang chủ
+              </Link>
+            </li>
+            <li>
+              <Link to={"/articles"} className="mobile-nav__link">
+                Bài viết
+              </Link>
+            </li>
+            <li>
+              <Link to={"/news"} className="mobile-nav__link">
+                Thời sự
+              </Link>
+            </li>
+            <li>
+              <Link to={"/international"} className="mobile-nav__link">
+                Thế giới
+              </Link>
+            </li>
+            <li>
+              <Link to={"/economy"} className="mobile-nav__link">
+                Kinh tế
+              </Link>
+            </li>
+            <li>
+              <Link to={"/education"} className="mobile-nav__link">
+                Giáo dục
+              </Link>
+            </li>
+            <li>
+              <Link to={"/health"} className="mobile-nav__link">
+                Sức khỏe
+              </Link>
+            </li>
+            <li>
+              <Link to={"/entertainment"} className="mobile-nav__link">
+                Giải trí
+              </Link>
+            </li>
+            <li>
+              <Link to={"/jobs"} className="mobile-nav__link">
+                Việc làm
+              </Link>
+            </li>
+            <li>
+              <Link to={"/ennews"} className="mobile-nav__link">
+                Tin tiếng Anh
+              </Link>
+            </li>
+            <li>
+              <Link to={"/law"} className="mobile-nav__link">
+                Pháp luật
+              </Link>
+            </li>
+            <li>
+              <Link to={"/sport"} className="mobile-nav__link">
+                Thể thao
+              </Link>
+            </li>
+            <li>
+              <Link to={"/life"} className="mobile-nav__link">
+                Đời sống
+              </Link>
+            </li>
+            <li>
+              <Link to={"/travel"} className="mobile-nav__link">
+                Du lịch
+              </Link>
+            </li>
+            <li>
+              <Link to={"/science"} className="mobile-nav__link">
+                Khoa học
+              </Link>
+            </li>
+          </ul>
+        </nav>
+        <button
+          type="button"
+          className="mobile-nav-close-btn"
+          onClick={toggleMobileNav}
+        >
+          <i className="bxr  bx-x"></i>
+        </button>
+      </div>
     </>
   );
 };
