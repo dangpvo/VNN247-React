@@ -116,13 +116,18 @@ footer {
   }
 
   .footer-wrapper-right {
-    justify-content: flex-end;
+    /* justify-content: flex-end; */
     padding: 0;
+    gap: 30px;
   }
 }
 
 /* lg */
 @media (min-width: 1024px) {
+  .footer-wrapper-right {
+    justify-content: flex-end;
+    padding: 0;
+  }
 }
 
 /* xl */
