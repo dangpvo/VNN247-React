@@ -15,7 +15,7 @@ const LatestNews = () => {
             <span className="latestnews__cat">{items[0].category + " "}</span> |
             <span className="latestnews__src"> VnExpress</span>
           </div>
-          <div className="latestnews-left__img">
+          <div className="latestnews-left__img shadow">
             <img src={items[0].cover} alt="" className="latestnews__img" />
           </div>
         </div>
@@ -33,7 +33,7 @@ const LatestNews = () => {
                 | <span className="latestnews__src">VnExpress</span>
               </div>
             </div>
-            <div className="news-card-hori-1__right">
+            <div className="news-card-hori-1__right shadow">
               <img src={items[1].cover} alt="" className="latestnews__img" />
             </div>
           </div>
@@ -51,7 +51,7 @@ const LatestNews = () => {
                 | <span className="latestnews__src">VnExpress</span>
               </div>
             </div>
-            <div className="news-card-hori-1__right">
+            <div className="news-card-hori-1__right shadow">
               <img src={items[2].cover} alt="" className="latestnews__img" />
             </div>
           </div>
@@ -69,7 +69,7 @@ const LatestNews = () => {
                 | <span className="latestnews__src">VnExpress</span>
               </div>
             </div>
-            <div className="news-card-hori-1__right">
+            <div className="news-card-hori-1__right shadow">
               <img src={items[3].cover} alt="" className="latestnews__img" />
             </div>
           </div>
