@@ -1,0 +1,17 @@
+.hotnews {
+  margin-bottom: 20px;
+}
+
+.hotnews .box {
+  margin: 15px 15px 15px 0;
+  cursor: pointer;
+}
+
+.hotnews img {
+  width: 100%;
+  height: 100%;
+}
+
+.hotnews .text {
+  padding: 20px;
+}

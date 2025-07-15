@@ -1,0 +1,30 @@
+.g-news-sec .box {
+  background-color: #fff;
+  display: flex;
+  position: relative;
+  margin: 15px 15px 15px 0;
+  cursor: pointer;
+}
+
+.g-news-sec .image {
+  position: relative;
+  height: 150px;
+}
+
+.g-news-sec img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.g-news-sec .text h1 {
+  padding: 0 0 0 20px;
+  margin: 0;
+}
+
+.g-news-sec .date {
+  margin-top: 15px;
+  padding: 0 0 0 20px;
+  display: flex;
+  flex-direction: column;
+}

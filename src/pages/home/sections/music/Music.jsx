@@ -28,7 +28,7 @@ const Music = () => {
 
   return (
     <>
-      <section className="music">
+      <section className="music container">
         <SectionHeading title={"Music News"} />
         <div className="content">
           <Slider {...settings}>

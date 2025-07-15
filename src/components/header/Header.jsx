@@ -99,7 +99,7 @@ const Header = () => {
                 <Link to={"/ennews"}>Tin tiếng Anh</Link>
               </li>
               <li className="more-li" ref={moreMenuRef} onClick={togglePopup}>
-                Xem thêm
+                Xem thêm <i class="bxr  bx-arrow-down-stroke-circle"></i>
                 {isPopupVisible && (
                   <div className="more-popup" ref={morePopupRef}>
                     <ul className="more-popup__ul">

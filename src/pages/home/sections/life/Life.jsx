@@ -24,7 +24,7 @@ const Life = () => {
 
   return (
     <>
-      <section className="popular-post life">
+      <section className="popular-post life container">
         <SectionHeading title={"Life Style"} />
         <div className="content">
           <Slider {...settings}>

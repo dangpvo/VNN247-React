@@ -1,10 +1,55 @@
-main .container {
+.two-cols-sec {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
-@media screen and (max-width: 768px) {
-  main .container {
-    flex-direction: column;
+.two-cols-sec > .lottery {
+  width: 100%;
+}
+
+.two-cols-sec > .g-news-sec {
+  width: 100%;
+  margin-bottom: 0 !important;
+}
+
+.g-news-sec {
+  margin-bottom: 50px;
+}
+
+/* xs */
+@media (min-width: 475px) {
+}
+
+/* sm */
+@media (min-width: 640px) {
+}
+
+/* md */
+@media (min-width: 768px) {
+  .two-cols-sec {
+    flex-wrap: nowrap;
   }
+
+  .two-cols-sec > .lottery {
+    width: 50%;
+  }
+
+  .two-cols-sec > .g-news-sec {
+    width: 50%;
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+}
+
+/* xl */
+@media (min-width: 1280px) {
+}
+
+/* 2xl */
+@media (min-width: 1536px) {
 }
