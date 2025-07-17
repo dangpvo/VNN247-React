@@ -8,7 +8,7 @@
 
 .articlesPg-title h1 {
   font-weight: 400;
-  background-color: #fb4c35;
+  background-color: var(--clr-rose);
   color: #fff;
   height: 35px;
   width: fit-content;

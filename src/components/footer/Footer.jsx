@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import { assets } from "../../assets/assets";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -13,9 +14,9 @@ const Footer = () => {
             </div>
             <div className="footer-wrapper-left__desc">
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero
-                ullam expedita dicta ratione, vel iure sint voluptatibus
-                consequatur provident excepturi ducimus!
+                VNN247 – Đọc tin nhanh, xem rõ ràng, cập nhật liên tục mỗi ngày.
+                Tin tức chọn lọc từ Việt Nam và thế giới, dành cho bạn đọc hiện
+                đại.
               </p>
             </div>
           </div>
@@ -23,9 +24,9 @@ const Footer = () => {
           <div className="footer-wrapper-right">
             <div className="footer-column subscribe">
               <h1 className="title">Subscribe to our news</h1>
-              <form action="">
+              <form>
                 <input type="email" placeholder="Email Address..." />
-                <button>
+                <button type="submit">
                   <i className="bxr  bx-paper-plane"></i> SUBMIT
                 </button>
               </form>
@@ -37,16 +38,13 @@ const Footer = () => {
               <div className="footer-column__content">
                 <ul>
                   <li>
-                    <a href="">About Us</a>
+                    <Link to={"/about"}>About Us</Link>
                   </li>
                   <li>
-                    <a href="">News</a>
+                    <Link to={"/ourstory"}>Our Story</Link>
                   </li>
                   <li>
-                    <a href="">Career</a>
-                  </li>
-                  <li>
-                    <a href="">Our Story</a>
+                    <Link to={"/career"}>Career</Link>
                   </li>
                 </ul>
               </div>
@@ -58,7 +56,7 @@ const Footer = () => {
               <div className="footer-column__content">
                 <ul>
                   <li>09126 Chemnitz, Germany</li>
-                  <li>Email: info@verteam.com</li>
+                  <li>Email: info@vnn247.com</li>
                   <li>Phone: (+49) 1234 567 890</li>
                 </ul>
               </div>
