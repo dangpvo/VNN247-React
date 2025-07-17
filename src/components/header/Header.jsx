@@ -143,7 +143,10 @@ const Header = () => {
               <Link
                 to={"/"}
                 className="mobile-nav__link"
-                onClick={toggleMobileNav}
+                onClick={() => {
+                  toggleMobileNav();
+                  setNavbar(!navbar);
+                }}
               >
                 Trang chủ
               </Link>
@@ -152,7 +155,10 @@ const Header = () => {
               <Link
                 to={"/articles"}
                 className="mobile-nav__link"
-                onClick={toggleMobileNav}
+                onClick={() => {
+                  toggleMobileNav();
+                  setNavbar(!navbar);
+                }}
               >
                 Bài viết
               </Link>
@@ -161,7 +167,10 @@ const Header = () => {
               <Link
                 to={"/news"}
                 className="mobile-nav__link"
-                onClick={toggleMobileNav}
+                onClick={() => {
+                  toggleMobileNav();
+                  setNavbar(!navbar);
+                }}
               >
                 Thời sự
               </Link>
@@ -170,7 +179,10 @@ const Header = () => {
               <Link
                 to={"/international"}
                 className="mobile-nav__link"
-                onClick={toggleMobileNav}
+                onClick={() => {
+                  toggleMobileNav();
+                  setNavbar(!navbar);
+                }}
               >
                 Thế giới
               </Link>
@@ -179,7 +191,10 @@ const Header = () => {
               <Link
                 to={"/economy"}
                 className="mobile-nav__link"
-                onClick={toggleMobileNav}
+                onClick={() => {
+                  toggleMobileNav();
+                  setNavbar(!navbar);
+                }}
               >
                 Kinh tế
               </Link>
@@ -188,7 +203,10 @@ const Header = () => {
               <Link
                 to={"/education"}
                 className="mobile-nav__link"
-                onClick={toggleMobileNav}
+                onClick={() => {
+                  toggleMobileNav();
+                  setNavbar(!navbar);
+                }}
               >
                 Giáo dục
               </Link>
@@ -197,7 +215,10 @@ const Header = () => {
               <Link
                 to={"/health"}
                 className="mobile-nav__link"
-                onClick={toggleMobileNav}
+                onClick={() => {
+                  toggleMobileNav();
+                  setNavbar(!navbar);
+                }}
               >
                 Sức khỏe
               </Link>
@@ -206,7 +227,10 @@ const Header = () => {
               <Link
                 to={"/entertainment"}
                 className="mobile-nav__link"
-                onClick={toggleMobileNav}
+                onClick={() => {
+                  toggleMobileNav();
+                  setNavbar(!navbar);
+                }}
               >
                 Giải trí
               </Link>
@@ -215,7 +239,10 @@ const Header = () => {
               <Link
                 to={"/jobs"}
                 className="mobile-nav__link"
-                onClick={toggleMobileNav}
+                onClick={() => {
+                  toggleMobileNav();
+                  setNavbar(!navbar);
+                }}
               >
                 Việc làm
               </Link>
@@ -224,7 +251,10 @@ const Header = () => {
               <Link
                 to={"/ennews"}
                 className="mobile-nav__link"
-                onClick={toggleMobileNav}
+                onClick={() => {
+                  toggleMobileNav();
+                  setNavbar(!navbar);
+                }}
               >
                 Tin tiếng Anh
               </Link>
@@ -233,7 +263,10 @@ const Header = () => {
               <Link
                 to={"/law"}
                 className="mobile-nav__link"
-                onClick={toggleMobileNav}
+                onClick={() => {
+                  toggleMobileNav();
+                  setNavbar(!navbar);
+                }}
               >
                 Pháp luật
               </Link>
@@ -242,7 +275,10 @@ const Header = () => {
               <Link
                 to={"/sport"}
                 className="mobile-nav__link"
-                onClick={toggleMobileNav}
+                onClick={() => {
+                  toggleMobileNav();
+                  setNavbar(!navbar);
+                }}
               >
                 Thể thao
               </Link>
@@ -251,7 +287,10 @@ const Header = () => {
               <Link
                 to={"/life"}
                 className="mobile-nav__link"
-                onClick={toggleMobileNav}
+                onClick={() => {
+                  toggleMobileNav();
+                  setNavbar(!navbar);
+                }}
               >
                 Đời sống
               </Link>
@@ -260,7 +299,10 @@ const Header = () => {
               <Link
                 to={"/travel"}
                 className="mobile-nav__link"
-                onClick={toggleMobileNav}
+                onClick={() => {
+                  toggleMobileNav();
+                  setNavbar(!navbar);
+                }}
               >
                 Du lịch
               </Link>
@@ -269,7 +311,10 @@ const Header = () => {
               <Link
                 to={"/science"}
                 className="mobile-nav__link"
-                onClick={toggleMobileNav}
+                onClick={() => {
+                  toggleMobileNav();
+                  setNavbar(!navbar);
+                }}
               >
                 Khoa học
               </Link>
@@ -279,7 +324,10 @@ const Header = () => {
         <button
           type="button"
           className="mobile-nav-close-btn"
-          onClick={toggleMobileNav}
+          onClick={() => {
+            toggleMobileNav();
+            setNavbar(!navbar);
+          }}
         >
           <i className="bxr  bx-x"></i>
         </button>
