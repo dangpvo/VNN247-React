@@ -29,7 +29,7 @@ const GeneralNewsSection = ({ title, isContainer = true, rows = 4 }) => {
 
   return (
     <>
-      <section className={`g-news-sec ${isContainer && "container"}`}>
+      <section className={`g-news-sec ${isContainer ? "container" : ""}`}>
         <SectionHeading title={title} />
         <Slider {...settings}>
           {popular.map((item) => (

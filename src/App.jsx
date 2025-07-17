@@ -6,6 +6,7 @@ import Footer from "./components/footer/Footer";
 import LoadingPg from "./pages/loading/LoadingPg";
 import NotFoundPg from "./pages/notFoundPg/NotFoundPg";
 import GeneralNewsPg from "./pages/generalNewsPg/GeneralNewsPg";
+import ArticlesPg from "./pages/articlesPg/ArticlesPg";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -82,6 +83,7 @@ const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />}></Route>
+        <Route path="/articles" element={<ArticlesPg />}></Route>
 
         {generalNewsPages.map((item) => (
           <Route
