@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Header.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { assets } from "../../assets/assets";
 import useMobileNav from "../../hooks/useMobileNav";
 
@@ -9,6 +9,7 @@ const Header = () => {
   const [isPopupVisible, setIsPopupVisible] = useState(false);
   const moreMenuRef = useRef(null);
   const morePopupRef = useRef(null);
+  const navigate = useNavigate();
 
   const { isMobileNavOpen, toggleMobileNav, mobileNavRef, headerBarsRef } =
     useMobileNav();
@@ -21,6 +22,13 @@ const Header = () => {
   const handleMobileNav = () => {
     toggleMobileNav();
     setNavbar(!navbar);
+  };
+
+  const handleLogoClick = () => {
+    navigate("/");
+    if (isMobileNavOpen) {
+      toggleMobileNav();
+    }
   };
 
   useEffect(() => {
@@ -45,7 +53,7 @@ const Header = () => {
     <>
       <section className="head">
         <div className="container flexSB">
-          <div className="logo">
+          <div className="logo" onClick={() => handleLogoClick()}>
             <img src={assets.logoFooter} alt="" />
           </div>
           {/* <div className="ad">
@@ -132,77 +140,137 @@ const Header = () => {
         <nav>
           <ul className="mobile-nav__menu">
             <li>
-              <Link to={"/"} className="mobile-nav__link">
+              <Link
+                to={"/"}
+                className="mobile-nav__link"
+                onClick={toggleMobileNav}
+              >
                 Trang chủ
               </Link>
             </li>
             <li>
-              <Link to={"/articles"} className="mobile-nav__link">
+              <Link
+                to={"/articles"}
+                className="mobile-nav__link"
+                onClick={toggleMobileNav}
+              >
                 Bài viết
               </Link>
             </li>
             <li>
-              <Link to={"/news"} className="mobile-nav__link">
+              <Link
+                to={"/news"}
+                className="mobile-nav__link"
+                onClick={toggleMobileNav}
+              >
                 Thời sự
               </Link>
             </li>
             <li>
-              <Link to={"/international"} className="mobile-nav__link">
+              <Link
+                to={"/international"}
+                className="mobile-nav__link"
+                onClick={toggleMobileNav}
+              >
                 Thế giới
               </Link>
             </li>
             <li>
-              <Link to={"/economy"} className="mobile-nav__link">
+              <Link
+                to={"/economy"}
+                className="mobile-nav__link"
+                onClick={toggleMobileNav}
+              >
                 Kinh tế
               </Link>
             </li>
             <li>
-              <Link to={"/education"} className="mobile-nav__link">
+              <Link
+                to={"/education"}
+                className="mobile-nav__link"
+                onClick={toggleMobileNav}
+              >
                 Giáo dục
               </Link>
             </li>
             <li>
-              <Link to={"/health"} className="mobile-nav__link">
+              <Link
+                to={"/health"}
+                className="mobile-nav__link"
+                onClick={toggleMobileNav}
+              >
                 Sức khỏe
               </Link>
             </li>
             <li>
-              <Link to={"/entertainment"} className="mobile-nav__link">
+              <Link
+                to={"/entertainment"}
+                className="mobile-nav__link"
+                onClick={toggleMobileNav}
+              >
                 Giải trí
               </Link>
             </li>
             <li>
-              <Link to={"/jobs"} className="mobile-nav__link">
+              <Link
+                to={"/jobs"}
+                className="mobile-nav__link"
+                onClick={toggleMobileNav}
+              >
                 Việc làm
               </Link>
             </li>
             <li>
-              <Link to={"/ennews"} className="mobile-nav__link">
+              <Link
+                to={"/ennews"}
+                className="mobile-nav__link"
+                onClick={toggleMobileNav}
+              >
                 Tin tiếng Anh
               </Link>
             </li>
             <li>
-              <Link to={"/law"} className="mobile-nav__link">
+              <Link
+                to={"/law"}
+                className="mobile-nav__link"
+                onClick={toggleMobileNav}
+              >
                 Pháp luật
               </Link>
             </li>
             <li>
-              <Link to={"/sport"} className="mobile-nav__link">
+              <Link
+                to={"/sport"}
+                className="mobile-nav__link"
+                onClick={toggleMobileNav}
+              >
                 Thể thao
               </Link>
             </li>
             <li>
-              <Link to={"/life"} className="mobile-nav__link">
+              <Link
+                to={"/life"}
+                className="mobile-nav__link"
+                onClick={toggleMobileNav}
+              >
                 Đời sống
               </Link>
             </li>
             <li>
-              <Link to={"/travel"} className="mobile-nav__link">
+              <Link
+                to={"/travel"}
+                className="mobile-nav__link"
+                onClick={toggleMobileNav}
+              >
                 Du lịch
               </Link>
             </li>
             <li>
-              <Link to={"/science"} className="mobile-nav__link">
+              <Link
+                to={"/science"}
+                className="mobile-nav__link"
+                onClick={toggleMobileNav}
+              >
                 Khoa học
               </Link>
             </li>
