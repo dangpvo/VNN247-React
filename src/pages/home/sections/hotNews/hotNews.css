@@ -2,9 +2,14 @@
   margin-bottom: 20px;
 }
 
+.hotnews .item {
+  height: 100%;
+}
+
 .hotnews .box {
   margin: 15px 15px 15px 0;
   cursor: pointer;
+  height: 100%;
 }
 
 .hotnews .box .image {

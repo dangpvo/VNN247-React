@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./hotNews.css";
 import SectionHeading from "../../../../components/sectionHeading/SectionHeading";
-import { ppost } from "../../../../assets/assets";
+import { assets, ppost } from "../../../../assets/assets";
 import Slider from "react-slick";
 import { formatDate } from "../../../../utils/formatDate";
 import { useNewsCtx } from "../../../../context/NewsContext";
@@ -19,7 +19,7 @@ const HotNews = () => {
     slidesToShow: 2,
     slidesPerRow: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 5000,
     pauseOnHover: true,
     responsive: [
       {
@@ -42,7 +42,7 @@ const HotNews = () => {
                 <div className="box shadow">
                   <div className="image">
                     <img
-                      src={item.image}
+                      src={item.image || assets.defaultImgBig}
                       alt=""
                       onClick={() => window.open(item.link, "_blank")}
                     />

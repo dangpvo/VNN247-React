@@ -9,6 +9,7 @@
 .g-news-sec .image {
   position: relative;
   height: 150px;
+  cursor: pointer;
 }
 
 .g-news-sec img {
@@ -27,6 +28,7 @@
 .g-news-sec .text h1 {
   padding: 0 0 0 20px;
   margin: 0;
+  cursor: pointer;
 }
 
 .g-news-sec .date {

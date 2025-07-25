@@ -2,7 +2,8 @@ import React from "react";
 import "./generalNewsSection.css";
 import Slider from "react-slick";
 import SectionHeading from "../sectionHeading/SectionHeading";
-import { popular } from "../../assets/assets";
+import { assets, popular } from "../../assets/assets";
+import { formatDate } from "../../utils/formatDate";
 
 const GeneralNewsSection = ({
   title,
@@ -44,7 +45,7 @@ const GeneralNewsSection = ({
                 <div className="image row">
                   <div className="img">
                     <img
-                      src={item.image}
+                      src={item.image || assets.logo}
                       alt=""
                       onClick={() => window.open(item.link, "_blank")}
                     />
@@ -63,7 +64,7 @@ const GeneralNewsSection = ({
                       : item.title}
                   </h1>
                   <div className="date">
-                    <label>{item.pubDate}</label>
+                    <label>{formatDate(item.pubDate)}</label>
                     <label>{item.source}</label>
                   </div>
                 </div>

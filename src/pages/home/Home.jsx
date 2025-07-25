@@ -10,9 +10,9 @@ import { useNewsCtx } from "../../context/NewsContext";
 const Home = () => {
   const { homeData } = useNewsCtx();
 
-  useEffect(() => {
-    console.log(homeData);
-  }, []);
+  // useEffect(() => {
+  //   console.log(homeData);
+  // }, []);
 
   return (
     <main>

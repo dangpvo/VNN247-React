@@ -5,6 +5,8 @@ import author from "./images/author.jpg";
 import sidebarBanner from "./images/sidebar-banner-new.jpg";
 import loadingPg from "./vnn247/loadingPg.png";
 import notfoundPg from "./vnn247/notfoundPg_2.png";
+import defaultImgBig from "./vnn247/1.png";
+import defaultImgMid from "./vnn247/7.png";
 
 import coverImgHero1 from "./images/hero/hero1.jpg";
 import coverImgHero2 from "./images/hero/hero2.jpg";
@@ -66,6 +68,8 @@ export const assets = {
   coverImgHero4,
   loadingPg,
   notfoundPg,
+  defaultImgBig,
+  defaultImgMid,
 };
 
 // DUMMY DATA
