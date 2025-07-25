@@ -4,9 +4,12 @@ import "./index.css";
 import "./utils.css";
 import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
+import { NewsContextProvider } from "./context/NewsContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
-    <App />
+    <NewsContextProvider>
+      <App />
+    </NewsContextProvider>
   </BrowserRouter>
 );
