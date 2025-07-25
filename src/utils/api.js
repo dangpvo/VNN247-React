@@ -5,7 +5,7 @@ const apiUrl = import.meta.env.VITE_VNN247_API_URL;
 const API = axios.create({
   // baseURL: "http://localhost:3000/api",
   baseURL: apiUrl + "/api",
-  timeout: 10000,
+  timeout: 20000,
   headers: {
     "Content-Type": "application/json",
     // Authorization: `Bearer ${token}`, // nếu có

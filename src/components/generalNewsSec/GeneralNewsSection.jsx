@@ -45,7 +45,11 @@ const GeneralNewsSection = ({
                 <div className="image row">
                   <div className="img">
                     <img
-                      src={item.image || assets.logo}
+                      src={
+                        item.source.toLowerCase() !== "dantri"
+                          ? item.image || assets.logo
+                          : assets.logo
+                      }
                       alt=""
                       onClick={() => window.open(item.link, "_blank")}
                     />

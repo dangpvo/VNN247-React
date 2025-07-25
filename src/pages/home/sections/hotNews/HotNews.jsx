@@ -42,7 +42,11 @@ const HotNews = () => {
                 <div className="box shadow">
                   <div className="image">
                     <img
-                      src={item.image || assets.defaultImgBig}
+                      src={
+                        item.source.toLowerCase() !== "dantri"
+                          ? item.image || assets.defaultImgBig
+                          : assets.defaultImgBig
+                      }
                       alt=""
                       onClick={() => window.open(item.link, "_blank")}
                     />
