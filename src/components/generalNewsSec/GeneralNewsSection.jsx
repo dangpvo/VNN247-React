@@ -4,7 +4,13 @@ import Slider from "react-slick";
 import SectionHeading from "../sectionHeading/SectionHeading";
 import { popular } from "../../assets/assets";
 
-const GeneralNewsSection = ({ title, isContainer = true, rows = 4 }) => {
+const GeneralNewsSection = ({
+  title,
+  isContainer = true,
+  rows = 4,
+  items = [],
+  category = "",
+}) => {
   var settings = {
     className: "center",
     centerMode: false,
@@ -32,22 +38,33 @@ const GeneralNewsSection = ({ title, isContainer = true, rows = 4 }) => {
       <section className={`g-news-sec ${isContainer ? "container" : ""}`}>
         <SectionHeading title={title} />
         <Slider {...settings}>
-          {popular.map((item) => (
+          {items.map((item) => (
             <div className="item">
               <div className="box shadow">
                 <div className="image row">
                   <div className="img">
-                    <img src={item.cover} alt="" />
+                    <img
+                      src={item.image}
+                      alt=""
+                      onClick={() => window.open(item.link, "_blank")}
+                    />
                   </div>
                   <div className="category category1">
-                    <span>{item.category}</span>
+                    <span>{category}</span>
                   </div>
                 </div>
                 <div className="text row">
-                  <h1 className="title">{item.title.slice(0, 50)}...</h1>
+                  <h1
+                    className="title"
+                    onClick={() => window.open(item.link, "_blank")}
+                  >
+                    {item.title.length > 80
+                      ? item.title.slice(0, 80) + "..."
+                      : item.title}
+                  </h1>
                   <div className="date">
-                    <label>{item.date}</label>
-                    <label>VnExpress</label>
+                    <label>{item.pubDate}</label>
+                    <label>{item.source}</label>
                   </div>
                 </div>
               </div>

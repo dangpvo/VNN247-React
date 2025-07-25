@@ -10,18 +10,36 @@ import { useNewsCtx } from "../../context/NewsContext";
 const Home = () => {
   const { homeData } = useNewsCtx();
 
+  useEffect(() => {
+    console.log(homeData);
+  }, []);
+
   return (
     <main>
-      {/* <Hero /> */}
       <LatestNews />
       <WeatherForecast />
       <HotNews />
       <div className="two-cols-sec container">
         <Lottery />
-        <GeneralNewsSection title={"Tin kinh tế"} isContainer={false} />
+        <GeneralNewsSection
+          title={"Tin kinh tế"}
+          isContainer={false}
+          items={homeData.economy}
+          category="Tin kinh tế"
+        />
       </div>
-      <GeneralNewsSection title={"Tin giáo dục"} rows={3} />
-      <GeneralNewsSection title={"Bài viết"} rows={2} />
+      <GeneralNewsSection
+        title={"Tin giáo dục"}
+        rows={3}
+        items={homeData.education}
+        category="Tin giáo dục"
+      />
+      <GeneralNewsSection
+        title={"Bài viết"}
+        rows={2}
+        items={homeData.articles}
+        category="Bài viết"
+      />
     </main>
   );
 };

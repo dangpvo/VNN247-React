@@ -8,17 +8,19 @@ export function NewsContextProvider({ children }) {
   const [loadDataError, setLoadDataError] = useState("");
 
   const [homeData, setHomeData] = useState(null);
+  const [isHomeDataLoaded, setIsHomeDataLoaded] = useState(false);
 
   const fetchHomeData = async () => {
     try {
       const res = await API.get("/");
       setHomeData(res.data);
+      setIsHomeDataLoaded(true);
     } catch (error) {
       console.error("Fetch data failed:", error);
     }
   };
 
-  const value = { homeData, fetchHomeData };
+  const value = { homeData, fetchHomeData, isHomeDataLoaded };
 
   return <NewsContext.Provider value={value}>{children}</NewsContext.Provider>;
 }
