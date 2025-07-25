@@ -1,9 +1,9 @@
 import axios from "axios";
 
-const apiUrl = import.meta.env.VNN247_API_URL;
+const apiUrl = import.meta.env.VITE_VNN247_API_URL;
 
 const API = axios.create({
-  //   baseURL: "http://localhost:3000/api",
+  // baseURL: "http://localhost:3000/api",
   baseURL: apiUrl + "/api",
   timeout: 10000,
   headers: {
