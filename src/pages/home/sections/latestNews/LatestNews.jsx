@@ -23,7 +23,10 @@ const LatestNews = () => {
             <span className="latestnews__cat">{"Tin mới "}</span> |{" "}
             <span className="latestnews__src">{items[0].source}</span>
           </div>
-          <div className="latestnews-left__img shadow">
+          <div
+            className="latestnews-left__img shadow"
+            onClick={() => window.open(items[0].link, "_blank")}
+          >
             <img src={items[0].image} alt="" className="latestnews__img" />
           </div>
         </div>
@@ -44,7 +47,10 @@ const LatestNews = () => {
                 <span className="latestnews__src">{items[1].source}</span>
               </div>
             </div>
-            <div className="news-card-hori-1__right shadow">
+            <div
+              className="news-card-hori-1__right shadow"
+              onClick={() => window.open(items[1].link, "_blank")}
+            >
               <img src={items[1].image} alt="" className="latestnews__img" />
             </div>
           </div>
@@ -65,7 +71,10 @@ const LatestNews = () => {
                 <span className="latestnews__src">{items[2].source}</span>
               </div>
             </div>
-            <div className="news-card-hori-1__right shadow">
+            <div
+              className="news-card-hori-1__right shadow"
+              onClick={() => window.open(items[2].link, "_blank")}
+            >
               <img src={items[2].image} alt="" className="latestnews__img" />
             </div>
           </div>
@@ -86,7 +95,10 @@ const LatestNews = () => {
                 <span className="latestnews__src">{items[3].source}</span>
               </div>
             </div>
-            <div className="news-card-hori-1__right shadow">
+            <div
+              className="news-card-hori-1__right shadow"
+              onClick={() => window.open(items[3].link, "_blank")}
+            >
               <img src={items[3].image} alt="" className="latestnews__img" />
             </div>
           </div>

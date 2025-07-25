@@ -1,8 +1,13 @@
 import React, { useEffect } from "react";
 import "./weatherForecast.css";
+import { useNewsCtx } from "../../../../context/NewsContext";
 
 const WeatherForecast = () => {
+  const { isHomeDataLoaded } = useNewsCtx();
+
   useEffect(() => {
+    if (!isHomeDataLoaded) return;
+
     // Tạo script
     const script = document.createElement("script");
     script.id = "weatherwidget-io-js";
@@ -16,7 +21,7 @@ const WeatherForecast = () => {
     return () => {
       document.body.removeChild(script);
     };
-  }, []);
+  }, [isHomeDataLoaded]);
 
   return (
     <section className="weather-forecast container">

@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "./hotNews.css";
 import SectionHeading from "../../../../components/sectionHeading/SectionHeading";
 import { ppost } from "../../../../assets/assets";
 import Slider from "react-slick";
+import { formatDate } from "../../../../utils/formatDate";
+import { useNewsCtx } from "../../../../context/NewsContext";
 
 const HotNews = () => {
+  const { homeData } = useNewsCtx();
+  const [items, setItems] = useState(homeData.hotNews);
+
   var settings = {
     arrows: false,
     dots: false,
@@ -14,7 +19,7 @@ const HotNews = () => {
     slidesToShow: 2,
     slidesPerRow: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
     pauseOnHover: true,
     responsive: [
       {
@@ -32,22 +37,31 @@ const HotNews = () => {
         <SectionHeading title={"Tâm Điểm"} />
         <div className="content">
           <Slider {...settings}>
-            {ppost.map((item) => (
+            {items.map((item) => (
               <div className="item">
                 <div className="box shadow">
                   <div className="image">
-                    <div className="img">
-                      <img src={item.cover} alt="" />
-                    </div>
+                    <img
+                      src={item.image}
+                      alt=""
+                      onClick={() => window.open(item.link, "_blank")}
+                    />
                     <div className="category category1">
-                      <span>{item.category}</span>
+                      <span>Tâm điểm</span>
                     </div>
                   </div>
                   <div className="text">
-                    <h1 className="title">{item.title.slice(0, 40)}...</h1>
+                    <h1
+                      className="title"
+                      onClick={() => window.open(item.link, "_blank")}
+                    >
+                      {item.title.length > 65
+                        ? item.title.slice(0, 65) + "..."
+                        : item.title}
+                    </h1>
                     <div className="date">
-                      <label>VnExpress | </label>
-                      <label htmlFor="">{item.date}</label>
+                      <label>{item.source} | </label>
+                      <label htmlFor="">{formatDate(item.pubDate)}</label>
                     </div>
                   </div>
                 </div>
