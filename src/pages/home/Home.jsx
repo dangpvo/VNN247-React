@@ -5,12 +5,15 @@ import WeatherForecast from "./sections/weatherForecast/WeatherForecast";
 import HotNews from "./sections/hotNews/HotNews";
 import Lottery from "./sections/lottery/Lottery";
 import GeneralNewsSection from "../../components/generalNewsSec/GeneralNewsSection";
+import { useNewsCtx } from "../../context/NewsContext";
 
 const Home = () => {
+  const { homeData } = useNewsCtx();
+
   return (
     <main>
       <LatestNews />
-      {/* <WeatherForecast />
+      <WeatherForecast />
       <HotNews />
       <div className="two-cols-sec container">
         <Lottery />
@@ -32,7 +35,7 @@ const Home = () => {
         rows={2}
         items={homeData.articles}
         category="Bài viết"
-      /> */}
+      />
     </main>
   );
 };

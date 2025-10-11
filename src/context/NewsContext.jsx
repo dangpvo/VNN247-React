@@ -18,7 +18,7 @@ export function NewsContextProvider({ children }) {
 
       // Kiểm tra cache (3 phút)
       const cached = localStorage.getItem("homeData");
-      const cachedTime = localStorage.getItem("homeDataTime");
+      const cachedTime = Number(localStorage.getItem("homeDataTime"));
       const now = Date.now();
       if (cached && cachedTime && now - cachedTime < 3 * 60 * 1000) {
         setHomeData(JSON.parse(cached));
@@ -40,8 +40,8 @@ export function NewsContextProvider({ children }) {
       setHomeData(resultObj);
       setIsHomeDataLoaded(true);
     } catch (err) {
-      console.error("Lỗi tải dữ liệu:", err);
-      setLoadDataError("⚠️ Không thể tải tin tức. Vui lòng thử lại sau!");
+      console.error("Loading error:", err);
+      setLoadDataError("⚠️ Could not load the news. Please try again later!");
       setIsHomeDataLoaded(false);
     } finally {
       setIsLoadingData(false);

@@ -18,12 +18,10 @@ export async function fetchRSSFeeds(feedList = [], limit = 0) {
       }
 
       const items = data.items.map((item) => ({
-        title: item.title,
+        title: decodeHtmlEntities(item.title),
         link: item.link,
         pubDate: item.pubDate,
         description: item.description.replace(/<[^>]+>/g, ""), // remove HTML tags
-        // image:
-        //   item.enclosure?.link || item.thumbnail || item.enclosure?.url || null,
         image: decodeHtmlEntities(
           item.enclosure?.link || item.thumbnail || item.enclosure?.url || null
         ),
