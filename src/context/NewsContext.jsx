@@ -48,10 +48,6 @@ export function NewsContextProvider({ children }) {
     }
   };
 
-  useEffect(() => {
-    fetchHomeData();
-  }, []);
-
   const value = { homeData, fetchHomeData, isLoadingData, isHomeDataLoaded };
 
   return <NewsContext.Provider value={value}>{children}</NewsContext.Provider>;

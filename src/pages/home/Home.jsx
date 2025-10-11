@@ -5,15 +5,8 @@ import WeatherForecast from "./sections/weatherForecast/WeatherForecast";
 import HotNews from "./sections/hotNews/HotNews";
 import Lottery from "./sections/lottery/Lottery";
 import GeneralNewsSection from "../../components/generalNewsSec/GeneralNewsSection";
-import { useNewsCtx } from "../../context/NewsContext";
 
 const Home = () => {
-  const { homeData } = useNewsCtx();
-
-  // useEffect(() => {
-  //   console.log(homeData);
-  // }, []);
-
   return (
     <main>
       <LatestNews />

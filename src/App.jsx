@@ -7,9 +7,13 @@ import LoadingPg from "./pages/loading/LoadingPg";
 import NotFoundPg from "./pages/notFoundPg/NotFoundPg";
 import GeneralNewsPg from "./pages/generalNewsPg/GeneralNewsPg";
 import ArticlesPg from "./pages/articlesPg/ArticlesPg";
+import { useNewsCtx } from "./context/NewsContext";
 
 const App = () => {
+  const { isLoadingData, isHomeDataLoaded } = useNewsCtx();
+
   const [loading, setLoading] = useState(true);
+  const [minTimePassed, setMinTimePassed] = useState(false);
 
   const generalNewsPages = [
     {
@@ -67,14 +71,11 @@ const App = () => {
   ];
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 10000);
-
+    const timer = setTimeout(() => setMinTimePassed(true), 2000);
     return () => clearTimeout(timer);
   }, []);
 
-  if (loading) {
+  if (isLoadingData || !isHomeDataLoaded || !minTimePassed) {
     return <LoadingPg />;
   }
 
