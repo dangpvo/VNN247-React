@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./LatestNews.css";
-import { hero } from "../../../../assets/assets";
 import { useNewsCtx } from "../../../../context/NewsContext";
 import { useNavigate } from "react-router-dom";
 

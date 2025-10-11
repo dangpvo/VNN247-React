@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./hotNews.css";
 import SectionHeading from "../../../../components/sectionHeading/SectionHeading";
-import { assets, ppost } from "../../../../assets/assets";
+import { assets } from "../../../../assets/assets";
 import Slider from "react-slick";
 import { formatDate } from "../../../../utils/formatDate";
 import { useNewsCtx } from "../../../../context/NewsContext";
