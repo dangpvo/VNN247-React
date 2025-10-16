@@ -10,7 +10,7 @@ import ArticlesPg from "./pages/articlesPg/ArticlesPg";
 import { useNewsCtx } from "./context/NewsContext";
 
 const App = () => {
-  const { isLoadingData, isHomeDataLoaded } = useNewsCtx();
+  const { loadingMap, isLoadingData, isHomeDataLoaded } = useNewsCtx();
 
   const [loading, setLoading] = useState(true);
   const [minTimePassed, setMinTimePassed] = useState(false);
@@ -75,7 +75,7 @@ const App = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  if (isLoadingData || !isHomeDataLoaded || !minTimePassed) {
+  if (loadingMap.home || !isHomeDataLoaded || !minTimePassed) {
     return <LoadingPg />;
   }
 

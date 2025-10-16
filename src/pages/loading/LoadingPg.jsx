@@ -2,9 +2,10 @@ import React, { useEffect } from "react";
 import "./LoadingPg.css";
 import { useLocation } from "react-router-dom";
 import { useNewsCtx } from "../../context/NewsContext";
+import { pageKeysWithRSS } from "../../data/pageKeysWithRSS";
 
 const LoadingPg = () => {
-  const { fetchHomeData } = useNewsCtx();
+  const { fetchHomeData, fetchDataForPage } = useNewsCtx();
 
   const location = useLocation();
   const currentPath = location.pathname;
@@ -12,11 +13,8 @@ const LoadingPg = () => {
   useEffect(() => {
     if (currentPath === "/") {
       // Load data cho trang Home
-      fetchHomeData();
-    } else if (currentPath.startsWith("/article")) {
-      // Load data cho bài viết
-    } else {
-      // Load data mặc định hoặc cho trang khác
+      // fetchHomeData();
+      fetchDataForPage(pageKeysWithRSS.home);
     }
   }, [currentPath]);
 

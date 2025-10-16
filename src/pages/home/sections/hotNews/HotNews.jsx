@@ -7,8 +7,8 @@ import { formatDate } from "../../../../utils/formatDate";
 import { useNewsCtx } from "../../../../context/NewsContext";
 
 const HotNews = () => {
-  const { homeData } = useNewsCtx();
-  const [items, setItems] = useState(homeData.hotNews);
+  const { homeData, newsData } = useNewsCtx();
+  const [items, setItems] = useState(newsData.home.hotNews);
 
   var settings = {
     arrows: false,

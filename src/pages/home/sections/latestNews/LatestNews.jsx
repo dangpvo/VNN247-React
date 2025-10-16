@@ -4,8 +4,8 @@ import { useNewsCtx } from "../../../../context/NewsContext";
 import { useNavigate } from "react-router-dom";
 
 const LatestNews = () => {
-  const { homeData } = useNewsCtx();
-  const [items, setItems] = useState(homeData.latestNews);
+  const { homeData, newsData } = useNewsCtx();
+  const [items, setItems] = useState(newsData.home.latestNews);
 
   return (
     <>

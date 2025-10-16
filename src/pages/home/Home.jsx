@@ -8,7 +8,7 @@ import GeneralNewsSection from "../../components/generalNewsSec/GeneralNewsSecti
 import { useNewsCtx } from "../../context/NewsContext";
 
 const Home = () => {
-  const { homeData } = useNewsCtx();
+  const { homeData, newsData } = useNewsCtx();
 
   return (
     <main>
@@ -20,20 +20,20 @@ const Home = () => {
         <GeneralNewsSection
           title={"Tin kinh tế"}
           isContainer={false}
-          items={homeData.economy}
+          items={newsData.home.economy}
           category="Tin kinh tế"
         />
       </div>
       <GeneralNewsSection
         title={"Tin giáo dục"}
         rows={3}
-        items={homeData.education}
+        items={newsData.home.education}
         category="Tin giáo dục"
       />
       <GeneralNewsSection
         title={"Bài viết"}
         rows={2}
-        items={homeData.articles}
+        items={newsData.home.articles}
         category="Bài viết"
       />
     </main>
