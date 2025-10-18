@@ -9,6 +9,7 @@ import GeneralNewsPg from "./pages/generalNewsPg/GeneralNewsPg";
 import ArticlesPg from "./pages/articlesPg/ArticlesPg";
 import { useNewsCtx } from "./context/NewsContext";
 import { pageKeysWithRSS } from "./data/pageKeysWithRSS";
+import { AnimatePresence, motion } from "framer-motion";
 
 const App = () => {
   const { loadingMap, isLoadingData, isHomeDataLoaded } = useNewsCtx();
@@ -96,25 +97,35 @@ const App = () => {
   return (
     <>
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/articles" element={<ArticlesPg />}></Route>
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={location.pathname}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ duration: 0.3 }}
+        >
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/articles" element={<ArticlesPg />}></Route>
 
-        {generalNewsPages.map((item) => (
-          <Route
-            key={item.path}
-            path={item.path}
-            element={
-              <GeneralNewsPg
-                title={item.title}
-                pageKeyWithRSS={item.pageKeysWithRSS}
-              />
-            }
-          ></Route>
-        ))}
+            {generalNewsPages.map((item) => (
+              <Route
+                key={item.path}
+                path={item.path}
+                element={
+                  <GeneralNewsPg
+                    title={item.title}
+                    pageKeyWithRSS={item.pageKeysWithRSS}
+                  />
+                }
+              ></Route>
+            ))}
 
-        <Route path="*" element={<NotFoundPg />}></Route>
-      </Routes>
+            <Route path="*" element={<NotFoundPg />}></Route>
+          </Routes>
+        </motion.div>
+      </AnimatePresence>
       <Footer />
     </>
   );
