@@ -107,9 +107,9 @@ const App = () => {
         >
           <Routes>
             <Route path="/" element={<Home />}></Route>
-            <Route path="/articles" element={<ArticlesPg />}></Route>
+            {/* <Route path="/articles" element={<ArticlesPg />}></Route> */}
 
-            {generalNewsPages.map((item) => (
+            {/* {generalNewsPages.map((item) => (
               <Route
                 key={item.path}
                 path={item.path}
@@ -120,8 +120,7 @@ const App = () => {
                   />
                 }
               ></Route>
-            ))}
-
+            ))} */}
             <Route path="*" element={<NotFoundPg />}></Route>
           </Routes>
         </motion.div>
