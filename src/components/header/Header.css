@@ -30,15 +30,24 @@ header li a:hover {
   cursor: pointer;
 }
 
-header .ad {
+.ad {
   /* display: flex; */
   display: none;
   justify-content: center;
   align-items: center;
+  height: 30px;
+  filter: invert(1);
+}
+
+.ad img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .barIco {
-  display: block;
+  /* display: block; */
+  display: none;
   font-size: 25px;
   background: none;
   color: #fff;
@@ -135,6 +144,9 @@ header .ad {
 
 /* xs */
 @media (min-width: 475px) {
+  .ad {
+    display: block;
+  }
 }
 
 /* sm */
@@ -148,7 +160,8 @@ header .ad {
 /* lg */
 @media (min-width: 1024px) {
   header {
-    display: block;
+    /* display: block; */
+    display: none;
   }
 
   header li {

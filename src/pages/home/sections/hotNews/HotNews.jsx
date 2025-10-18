@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import "./hotNews.css";
 import SectionHeading from "../../../../components/sectionHeading/SectionHeading";
-import { assets, ppost } from "../../../../assets/assets";
+import { assets } from "../../../../assets/assets";
 import Slider from "react-slick";
 import { formatDate } from "../../../../utils/formatDate";
 import { useNewsCtx } from "../../../../context/NewsContext";
 
 const HotNews = () => {
-  const { homeData } = useNewsCtx();
-  const [items, setItems] = useState(homeData.hotNews);
+  const { homeData, newsData } = useNewsCtx();
+  const [items, setItems] = useState(newsData.home.hotNews);
 
   var settings = {
     arrows: false,
@@ -65,7 +65,7 @@ const HotNews = () => {
                     </h1>
                     <div className="date">
                       <label>{item.source} | </label>
-                      <label htmlFor="">{formatDate(item.pubDate)}</label>
+                      <label>{formatDate(item.pubDate)}</label>
                     </div>
                   </div>
                 </div>

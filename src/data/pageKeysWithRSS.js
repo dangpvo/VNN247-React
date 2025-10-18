@@ -1,0 +1,46 @@
+import {
+  rssMapArticles,
+  rssMapEconomy,
+  rssMapEducation,
+  rssMapEntertainment,
+  rssMapHealth,
+  rssMapHome,
+  rssMapJobs,
+  rssMapLaws,
+  rssMapLife,
+  rssMapNews,
+  rssMapScience,
+  rssMapSports,
+  rssMapTravel,
+  rssMapWorld,
+} from "../data/rssMap";
+
+export const pageKeysWithRSS = {
+  home: { pageKey: "home", rss: rssMapHome, category: "Trang chủ" },
+  articles: { pageKey: "articles", rss: rssMapArticles, category: "Bài viết" },
+  news: { pageKey: "news", rss: rssMapNews, category: "Thời sự" },
+  international: {
+    pageKey: "international",
+    rss: rssMapWorld,
+    category: "Thế giới",
+  },
+  economy: { pageKey: "economy", rss: rssMapEconomy, category: "Kinh tế" },
+  education: {
+    pageKey: "education",
+    rss: rssMapEducation,
+    category: "Giáo dục",
+  },
+  health: { pageKey: "health", rss: rssMapHealth, category: "Sức khỏe" },
+  entertainment: {
+    pageKey: "entertainment",
+    rss: rssMapEntertainment,
+    category: "Giải trí",
+  },
+  jobs: { pageKey: "jobs", rss: rssMapJobs, category: "Việc làm" },
+  // ennews: { pageKey: "ennews", rss: rssMapEnNews, category: "" },
+  lawnpolicy: { pageKey: "lawnpolicy", rss: rssMapLaws, category: "Pháp luật" },
+  sports: { pageKey: "sports", rss: rssMapSports, category: "Thể thao" },
+  life: { pageKey: "life", rss: rssMapLife, category: "Đời sống" },
+  travel: { pageKey: "travel", rss: rssMapTravel, category: "Du lịch" },
+  science: { pageKey: "science", rss: rssMapScience, category: "Khoa học" },
+};
