@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 const LatestNews = () => {
   const { homeData, newsData } = useNewsCtx();
-  const [items, setItems] = useState(newsData.home.latestNews);
+  const [items, setItems] = useState(newsData?.home?.latestNews || []);
 
   return (
     <>
