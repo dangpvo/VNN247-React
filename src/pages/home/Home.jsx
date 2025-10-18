@@ -18,17 +18,35 @@ const Home = () => {
       <div className="two-cols-sec container">
         <Lottery />
         <GeneralNewsSection
-          title={"Tin kinh tế"}
+          title={"Tin giải trí"}
           isContainer={false}
-          items={newsData.home.economy}
+          items={newsData.home.entertainment}
           category="Tin kinh tế"
         />
       </div>
+      <GeneralNewsSection
+        title={"Tin kinh tế"}
+        rows={3}
+        items={newsData.home.economy}
+        category="Tin kinh tế"
+      />
       <GeneralNewsSection
         title={"Tin giáo dục"}
         rows={3}
         items={newsData.home.education}
         category="Tin giáo dục"
+      />
+      <GeneralNewsSection
+        title={"Tin đời sống"}
+        rows={3}
+        items={newsData.home.life}
+        category="Tin kinh tế"
+      />
+      <GeneralNewsSection
+        title={"Tin thể thao"}
+        rows={3}
+        items={newsData.home.sports}
+        category="Tin kinh tế"
       />
       <GeneralNewsSection
         title={"Bài viết"}

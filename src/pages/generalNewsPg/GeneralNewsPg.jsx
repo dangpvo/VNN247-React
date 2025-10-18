@@ -1,29 +1,49 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./GeneralNewsPg.css";
-import { popular } from "../../assets/assets";
+import { assets, popular } from "../../assets/assets";
+import { useNewsCtx } from "../../context/NewsContext";
+import LoadingSection from "../../components/loadingSection/LoadingSection";
+import { formatDate } from "../../utils/formatDate";
 
-const GeneralNewsPg = ({ title }) => {
+const GeneralNewsPg = ({ title, pageKeyWithRSS }) => {
+  const { fetchDataForPage, newsData, loadingMap } = useNewsCtx();
+
+  useEffect(() => {
+    fetchDataForPage(pageKeyWithRSS);
+  }, []);
+
+  const isLoading = loadingMap[pageKeyWithRSS.pageKey];
+  const data = newsData[pageKeyWithRSS.pageKey];
+
+  if (isLoading || !data) {
+    return <LoadingSection />;
+  }
+
   return (
     <main className="container">
       <div className="gNewsPg-title">
         <h1>{title.toUpperCase()}</h1>
       </div>
       <div className="gNewsPg-wrapper">
-        {popular.map((item) => (
+        {data.map((item) => (
           <div className="box shadow">
             <div className="image">
               <div className="img">
-                <img src={item.cover} alt="" />
+                <img src={item.image || assets.defaultImgBig} alt="" />
               </div>
               <div className="category category1">
-                <span>{item.category}</span>
+                <span>{pageKeyWithRSS.category}</span>
               </div>
             </div>
             <div className="text row">
-              <h1 className="title">{item.title.slice(0, 50)}...</h1>
+              <h1 className="title">
+                {item.title.length > 65
+                  ? item.title.slice(0, 65) + "..."
+                  : item.title}
+              </h1>
               <div className="date">
-                <label>{item.date}</label>
-                <label>VnExpress</label>
+                <label>{item.source} | </label>
+                <label>{formatDate(item.pubDate)}</label>
               </div>
             </div>
           </div>

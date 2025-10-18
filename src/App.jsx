@@ -8,6 +8,7 @@ import NotFoundPg from "./pages/notFoundPg/NotFoundPg";
 import GeneralNewsPg from "./pages/generalNewsPg/GeneralNewsPg";
 import ArticlesPg from "./pages/articlesPg/ArticlesPg";
 import { useNewsCtx } from "./context/NewsContext";
+import { pageKeysWithRSS } from "./data/pageKeysWithRSS";
 
 const App = () => {
   const { loadingMap, isLoadingData, isHomeDataLoaded } = useNewsCtx();
@@ -19,54 +20,67 @@ const App = () => {
     {
       path: "/news",
       title: "Thời sự",
+      pageKeysWithRSS: pageKeysWithRSS.news,
     },
     {
       path: "/international",
       title: "Thế giới",
+      pageKeysWithRSS: pageKeysWithRSS.international,
     },
     {
       path: "/economy",
       title: "Kinh tế",
+      pageKeysWithRSS: pageKeysWithRSS.economy,
     },
     {
       path: "/education",
       title: "Giáo dục",
+      pageKeysWithRSS: pageKeysWithRSS.education,
     },
     {
       path: "/health",
       title: "Sức khỏe",
+      pageKeysWithRSS: pageKeysWithRSS.health,
     },
     {
       path: "/entertainment",
       title: "Giải trí",
+      pageKeysWithRSS: pageKeysWithRSS.entertainment,
     },
     {
       path: "/jobs",
       title: "Việc làm",
+      pageKeysWithRSS: pageKeysWithRSS.jobs,
     },
-    {
-      path: "/ennews",
-      title: "Tin tiếng Anh",
-    },
+    // {
+    //   path: "/ennews",
+    //   title: "Tin tiếng Anh",
+    //   pageKeysWithRSS: pageKeysWithRSS.home
+    // },
     {
       path: "/lawnpolicy",
       title: "Pháp luật",
+      pageKeysWithRSS: pageKeysWithRSS.lawnpolicy,
     },
     {
       path: "/sports",
       title: "Thể thao",
+      pageKeysWithRSS: pageKeysWithRSS.sports,
     },
     {
       path: "/life",
       title: "Đời sống",
+      pageKeysWithRSS: pageKeysWithRSS.life,
     },
     {
       path: "/travel",
       title: "Du lịch",
+      pageKeysWithRSS: pageKeysWithRSS.travel,
     },
     {
       path: "/science",
       title: "Khoa học",
+      pageKeysWithRSS: pageKeysWithRSS.science,
     },
   ];
 
@@ -90,7 +104,12 @@ const App = () => {
           <Route
             key={item.path}
             path={item.path}
-            element={<GeneralNewsPg title={item.title} />}
+            element={
+              <GeneralNewsPg
+                title={item.title}
+                pageKeyWithRSS={item.pageKeysWithRSS}
+              />
+            }
           ></Route>
         ))}
 

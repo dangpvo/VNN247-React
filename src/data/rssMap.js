@@ -10,17 +10,17 @@ export const rssMapHome = {
     { source: "VnExpress", url: "https://vnexpress.net/rss/kinh-doanh.rss" },
     { source: "ThanhNien", url: "https://thanhnien.vn/rss/thi-truong.rss" },
     { source: "ThanhNien", url: "https://thanhnien.vn/rss/kinh-te.rss" },
-    { source: "TuoiTre", url: "https://tuoitre.vn/rss/kinh-doanh.rss" },
-    { source: "DanTri", url: "https://dantri.com.vn/rss/kinh-doanh.rss" },
+    // { source: "TuoiTre", url: "https://tuoitre.vn/rss/kinh-doanh.rss" },
+    // { source: "DanTri", url: "https://dantri.com.vn/rss/kinh-doanh.rss" },
     { source: "DanTri", url: "https://dantri.com.vn/rss/bat-dong-san.rss" },
-    { source: "PhapLuat", url: "https://plo.vn/rss/kinh-te-13.rss" },
+    // { source: "PhapLuat", url: "https://plo.vn/rss/kinh-te-13.rss" },
   ],
   education: [
     { source: "VnExpress", url: "https://vnexpress.net/rss/giao-duc.rss" },
-    { source: "ThanhNien", url: "https://thanhnien.vn/rss/giao-duc.rss" },
+    // { source: "ThanhNien", url: "https://thanhnien.vn/rss/giao-duc.rss" },
     { source: "TuoiTre", url: "https://tuoitre.vn/rss/giao-duc.rss" },
-    { source: "DanTri", url: "https://dantri.com.vn/rss/giao-duc.rss" },
-    { source: "PhapLuat", url: "https://plo.vn/rss/giao-duc-21.rss" },
+    // { source: "DanTri", url: "https://dantri.com.vn/rss/giao-duc.rss" },
+    // { source: "PhapLuat", url: "https://plo.vn/rss/giao-duc-21.rss" },
     {
       source: "PhapLuat",
       url: "https://plo.vn/rss/giao-duc/chon-truong-chon-nghe-313.rss",
@@ -40,6 +40,68 @@ export const rssMapHome = {
     {
       source: "PhapLuat",
       url: "https://plo.vn/rss/thoi-su/theo-dong-thoi-su-4.rss",
+    },
+  ],
+  entertainment: [
+    {
+      source: "VnExpress",
+      url: "https://vnexpress.net/rss/giai-tri.rss",
+    },
+    {
+      source: "VnExpress",
+      url: "https://vnexpress.net/rss/cuoi.rss",
+    },
+    {
+      source: "ThanhNien",
+      url: "https://thanhnien.vn/rss/giai-tri.rss",
+    },
+    {
+      source: "ThanhNien",
+      url: "https://thanhnien.vn/rss/gioi-tre.rss",
+    },
+    // {
+    //   source: "TuoiTre",
+    //   url: "https://tuoitre.vn/rss/giai-tri.rss",
+    // },
+    {
+      source: "TuoiTre",
+      url: "https://tuoitre.vn/rss/thu-gian.rss",
+    },
+    {
+      source: "TuoiTre",
+      url: "https://tuoitre.vn/rss/nhip-song-tre.rss",
+    },
+  ],
+  sports: [
+    {
+      source: "VnExpress",
+      url: "https://vnexpress.net/rss/the-thao.rss",
+    },
+    {
+      source: "ThanhNien",
+      url: "https://thanhnien.vn/rss/the-thao.rss",
+    },
+    {
+      source: "TuoiTre",
+      url: "https://tuoitre.vn/rss/the-thao.rss",
+    },
+  ],
+  life: [
+    {
+      source: "VnExpress",
+      url: "https://vnexpress.net/rss/gia-dinh.rss",
+    },
+    {
+      source: "ThanhNien",
+      url: "https://thanhnien.vn/rss/doi-song.rss",
+    },
+    {
+      source: "ThanhNien",
+      url: "https://thanhnien.vn/rss/tieu-dung-thong-minh.rss",
+    },
+    {
+      source: "TuoiTre",
+      url: "https://tuoitre.vn/rss/gia-that.rss",
     },
   ],
 };

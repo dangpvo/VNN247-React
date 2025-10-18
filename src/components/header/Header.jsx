@@ -56,9 +56,9 @@ const Header = () => {
           <div className="logo" onClick={() => handleLogoClick()}>
             <img src={assets.logoFooter} alt="" />
           </div>
-          {/* <div className="ad">
-            <img src={assets.headerb} alt="" />
-          </div> */}
+          <div className="ad">
+            <img src={assets.headerBanner} alt="" />
+          </div>
           <button className="barIco" onClick={() => handleMobileNav()}>
             {navbar ? (
               <i className="bx bx-x" />

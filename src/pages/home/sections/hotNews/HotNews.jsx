@@ -65,7 +65,7 @@ const HotNews = () => {
                     </h1>
                     <div className="date">
                       <label>{item.source} | </label>
-                      <label htmlFor="">{formatDate(item.pubDate)}</label>
+                      <label>{formatDate(item.pubDate)}</label>
                     </div>
                   </div>
                 </div>

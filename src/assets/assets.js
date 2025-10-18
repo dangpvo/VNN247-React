@@ -1,6 +1,8 @@
 import logo from "./vnn247/9-cut.png";
 import logoFooter from "./vnn247/8-cut.png";
 import headerb from "./images/headerb.png";
+import headerBanner from "./images/logo.png";
+
 import author from "./images/author.jpg";
 import sidebarBanner from "./images/sidebar-banner-new.jpg";
 import loadingPg from "./vnn247/loadingPg.png";
@@ -28,6 +30,7 @@ import pop16 from "./images/popular/pop16.jpg";
 export const assets = {
   logo,
   headerb,
+  headerBanner,
   sidebarBanner,
   logoFooter,
   loadingPg,
